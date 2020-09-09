@@ -1,21 +1,3 @@
-function search(list , input){
-  let lists = Array.from(list.children)
-// grab current list item .
-  console.log(list)
-// grab inputed text
-  let in_take = input.value
-// set input value to empty string
-  input.value =""
-// loop through items passing item text content  through a condition 
-  for(let i = 0 ; i<lists.length ;i++ ){
-    let text = lists[i].textContent
-    console.log(typeof text)
-// if item text content matches input value display that item at the top of the list 
-    if(text.indexOf(in_take) != -1){
-      list.insertBefore(lists[i],lists[0])
-    } 
-  }
-}
 
 class Find {
   constructor (list , input){
@@ -42,4 +24,4 @@ class Find {
 }
 
 console.log("heavy")
-export {search , Find} 
+export { Find} 
